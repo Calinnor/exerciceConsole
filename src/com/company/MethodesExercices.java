@@ -11,7 +11,7 @@ public class MethodesExercices {
         System.out.println("Menu des exercices.");
         System.out.println();
         System.out.println("Si vous ne souhaitez pas faire d'exercice, tappez 0.");
-        for (limitNumberMenu = 1; limitNumberMenu < 11; limitNumberMenu++) {
+        for (limitNumberMenu = 1; limitNumberMenu < 12; limitNumberMenu++) {
             System.out.println(limitNumberMenu + ") Choisissez-vous l'exercice " + limitNumberMenu +
                     " ? Tappez " + limitNumberMenu);
         }
@@ -52,6 +52,9 @@ public class MethodesExercices {
                 break;
             case 10:
                 exerciceNineViaMethode();
+                break;
+            case 11:
+                exerciceTenViaMethode();
                 break;
             case 0:
                 System.out.println("Vous n'avez pas choisi de faire les exercices.");
@@ -373,7 +376,7 @@ public class MethodesExercices {
             case "OUI":
                 exerciceHeightSecondViaMethod();
         }
-        System.out.println("Au revoir exercice 8'.");
+        System.out.println("Au revoir exercice 8'(9).");
     }
     public static void exerciceNineViaMethode(){
         System.out.println(" Réécrire l'algorithme précédant, mais cette fois-ci on ne connait pas d'avance combien l'utilisateur souhaite saisir " +
@@ -414,7 +417,63 @@ public class MethodesExercices {
             case "OUI":
                 exerciceNineViaMethode();
         }
-        System.out.println("Au revoir exercice 9.");
+        System.out.println("Au revoir exercice 10.");
+    }
+    public static void exerciceTenViaMethode(){
+        System.out.println("Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit,"+
+                " lire la somme qu'il paye et simuler la remise de la monnaie en affichant les textes 10 euros, 5 euros," +
+                "  et 1 euro autant de fois qu'il y a de coupures de chaque sorte à rendre.");
+        int achat, sommedue = 0, sommepayee, sommerendue = 0;
+        System.out.println("Entrez le prix de vos achats.");
+        Scanner keyboard = new Scanner(System.in);
+        achat=keyboard.nextInt();
+        while (achat>0){
+            sommedue=sommedue+achat;
+            System.out.println("Entrez le prix de vos achats. Entrez 0 si vous avez terminé vos achats.");
+            keyboard=new Scanner(System.in);
+            achat=keyboard.nextInt();
+        }
+        System.out.println("Vous devez "+sommedue+ " Euros. Entrez le montant de votre règlement:");
+        sommepayee=keyboard.nextInt();
+            if(sommepayee<sommedue || sommedue<0){
+                System.out.println("Vous devez encore "+(sommedue-sommepayee)+"Euros");
+                sommedue=sommedue-sommepayee;
+                while (0<sommedue){
+                    System.out.println("Ajoutez un montant afin de finir de payer vos achats.");
+                    int montant=keyboard.nextInt();
+                    sommedue=sommedue-montant;
+                    sommepayee=montant+sommepayee;
+                    System.out.println("Vous devez encore "+(sommedue)+" Euros");//erreur de rendu boucle while a reprendre du debut
+                }
+            }
+            else if(sommepayee==sommedue){
+                System.out.println("Merci.");
+            }
+            else{
+                sommerendue=sommepayee-sommedue;
+                int billetsDeDix=sommerendue/10;
+                int restes=sommerendue%10;
+
+                int billetsDeCinq=restes/5;
+                restes=restes%5;
+
+                int piecesDeUn=restes;
+                System.out.println("Le rendu de votre monnaie est de "+ billetsDeDix+ " billets de dix Euros, plus "+billetsDeCinq+ " billets" +
+                        " de cinq Euros et "+piecesDeUn+" pièces de un Euros.");
+            }
+
+        System.out.println("Merci et au revoir ! Souhaitez vous recommencer l'exercice ? O/N");
+        keyboard = new Scanner(System.in);
+        String restart = keyboard.nextLine();
+        switch (restart) {
+            case "O":
+            case "o":
+            case "oui":
+            case "Oui":
+            case "OUI":
+                exerciceTenViaMethode();
+        }
+        System.out.println("Au revoir exercice 11.");
     }
 
 
