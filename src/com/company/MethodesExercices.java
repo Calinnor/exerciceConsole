@@ -423,7 +423,7 @@ public class MethodesExercices {
         System.out.println("Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit,"+
                 " lire la somme qu'il paye et simuler la remise de la monnaie en affichant les textes 10 euros, 5 euros," +
                 "  et 1 euro autant de fois qu'il y a de coupures de chaque sorte à rendre.");
-        int achat, sommedue = 0, sommepayee, sommerendue = 0;
+        int achat, sommedue = 0, sommepayee ;
         System.out.println("Entrez le prix de vos achats.");
         Scanner keyboard = new Scanner(System.in);
         achat=keyboard.nextInt();
@@ -434,33 +434,28 @@ public class MethodesExercices {
             achat=keyboard.nextInt();
         }
         System.out.println("Vous devez "+sommedue+ " Euros. Entrez le montant de votre règlement:");
+        keyboard=new Scanner(System.in);
         sommepayee=keyboard.nextInt();
-            if(sommepayee<sommedue || sommedue<0){
-                System.out.println("Vous devez encore "+(sommedue-sommepayee)+"Euros");
-                sommedue=sommedue-sommepayee;
-                while (0<sommedue){
-                    System.out.println("Ajoutez un montant afin de finir de payer vos achats.");
-                    int montant=keyboard.nextInt();
-                    sommedue=sommedue-montant;
-                    sommepayee=montant+sommepayee;
-                    System.out.println("Vous devez encore "+(sommedue)+" Euros");//erreur de rendu boucle while a reprendre du debut
-                }
-            }
-            else if(sommepayee==sommedue){
-                System.out.println("Merci.");
-            }
-            else{
-                sommerendue=sommepayee-sommedue;
-                int billetsDeDix=sommerendue/10;
-                int restes=sommerendue%10;
-
-                int billetsDeCinq=restes/5;
-                restes=restes%5;
-
-                int piecesDeUn=restes;
-                System.out.println("Le rendu de votre monnaie est de "+ billetsDeDix+ " billets de dix Euros, plus "+billetsDeCinq+ " billets" +
-                        " de cinq Euros et "+piecesDeUn+" pièces de un Euros.");
-            }
+        sommedue=sommedue-sommepayee;
+        while(sommedue>0){
+            System.out.println("Vous devez encore "+sommedue+ " Euros. Entrez le montant de votre règlement:");
+            keyboard=new Scanner(System.in);
+            sommepayee=keyboard.nextInt();
+            sommedue=sommedue-sommepayee;
+        }
+        if (sommedue==0) {
+            System.out.println("Merci.");
+        }
+        if(sommedue<0) {
+            sommedue=Math.abs(sommedue);
+            int billetsDeDix = sommedue / 10;
+            int restes = sommedue % 10;
+            int billetsDeCinq = restes / 5;
+            restes = restes % 5;
+            int piecesDeUn = restes;
+            System.out.println("Le rendu de votre monnaie est de " + billetsDeDix + " billets de dix Euros, plus " + billetsDeCinq + " billets" +
+                    " de cinq Euros et " + piecesDeUn + " pièces de un Euros.");
+        }
 
         System.out.println("Merci et au revoir ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
@@ -486,11 +481,7 @@ public class MethodesExercices {
 
 
 
-    /*Exercice 5.10
-    Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit,
-    lire la somme qu'il paye et simuler la remise de la monnaie en affichant les textes 10 euros, 5 euros,
-     et 1 euro autant de fois qu'il y a de coupures de chaque sorte à rendre.
-     */
+   
 
     /*5.11
     Ecrire un algo permettant de connaitre ses chances de connaitre de gagner au tiercé, quinté et autrees impots volontaires;
