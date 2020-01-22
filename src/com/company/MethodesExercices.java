@@ -11,7 +11,7 @@ public class MethodesExercices {
         System.out.println("Menu des exercices.");
         System.out.println();
         System.out.println("Si vous ne souhaitez pas faire d'exercice, tappez 0.");
-        for (limitNumberMenu = 1; limitNumberMenu < 12; limitNumberMenu++) {
+        for (limitNumberMenu = 1; limitNumberMenu < 13; limitNumberMenu++) {
             System.out.println(limitNumberMenu + ") Choisissez-vous l'exercice " + limitNumberMenu +
                     " ? Tappez " + limitNumberMenu);
         }
@@ -55,6 +55,9 @@ public class MethodesExercices {
                 break;
             case 11:
                 exerciceTenViaMethode();
+                break;
+            case 12:
+                exerciceElevenViaMethod();
                 break;
             case 0:
                 System.out.println("Vous n'avez pas choisi de faire les exercices.");
@@ -423,33 +426,33 @@ public class MethodesExercices {
         System.out.println("Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit,"+
                 " lire la somme qu'il paye et simuler la remise de la monnaie en affichant les textes 10 euros, 5 euros," +
                 "  et 1 euro autant de fois qu'il y a de coupures de chaque sorte à rendre.");
-        int achat, sommedue = 0, sommepayee ;
+        int achat, sommeDue = 0, sommePayee ;
         System.out.println("Entrez le prix de vos achats.");
         Scanner keyboard = new Scanner(System.in);
         achat=keyboard.nextInt();
         while (achat>0){
-            sommedue=sommedue+achat;
+            sommeDue=sommeDue+achat;
             System.out.println("Entrez le prix de vos achats. Entrez 0 si vous avez terminé vos achats.");
             keyboard=new Scanner(System.in);
             achat=keyboard.nextInt();
         }
-        System.out.println("Vous devez "+sommedue+ " Euros. Entrez le montant de votre règlement:");
+        System.out.println("Vous devez "+sommeDue+ " Euros. Entrez le montant de votre règlement:");
         keyboard=new Scanner(System.in);
-        sommepayee=keyboard.nextInt();
-        sommedue=sommedue-sommepayee;
-        while(sommedue>0){
-            System.out.println("Vous devez encore "+sommedue+ " Euros. Entrez le montant de votre règlement:");
+        sommePayee=keyboard.nextInt();
+        sommeDue=sommeDue-sommePayee;
+        while(sommeDue>0){
+            System.out.println("Vous devez encore "+sommeDue+ " Euros. Entrez le montant de votre règlement:");
             keyboard=new Scanner(System.in);
-            sommepayee=keyboard.nextInt();
-            sommedue=sommedue-sommepayee;
+            sommePayee=keyboard.nextInt();
+            sommeDue=sommeDue-sommePayee;
         }
-        if (sommedue==0) {
+        if (sommeDue==0) {
             System.out.println("Merci.");
         }
-        if(sommedue<0) {
-            sommedue=Math.abs(sommedue);
-            int billetsDeDix = sommedue / 10;
-            int restes = sommedue % 10;
+        if(sommeDue<0) {
+            sommeDue=Math.abs(sommeDue);
+            int billetsDeDix = sommeDue / 10;
+            int restes = sommeDue % 10;
             int billetsDeCinq = restes / 5;
             restes = restes % 5;
             int piecesDeUn = restes;
@@ -470,22 +473,13 @@ public class MethodesExercices {
         }
         System.out.println("Au revoir exercice 11.");
     }
+    public static void exerciceElevenViaMethod(){
+        System.out.println(" Ecrire un algo permettant de connaitre ses chances de connaitre de gagner au tiercé, quinté et autrees impots volontaires;\n" +
+                "    On demande a l'utilisateur le nombre de chevaux partants et le nombre de chevaux joués...(voir mail)");
+        System.out.println("Pour le moment meme avec une correction je ne comprend pas...");
+        }
 
 
 
-
-
-
-
-
-
-
-
-   
-
-    /*5.11
-    Ecrire un algo permettant de connaitre ses chances de connaitre de gagner au tiercé, quinté et autrees impots volontaires;
-    On demande a l'utilisateur le nombre de chevaux partants et le nombre de chevaux joués...(voir mail)
-     */
 }
 
