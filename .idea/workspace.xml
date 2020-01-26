@@ -4,7 +4,6 @@
     <list default="true" id="cda9839d-b584-4a48-88ab-c8a8ed0383f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,44 +92,52 @@
       <option name="project" value="LOCAL" />
       <updated>1579956139615</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout d'untableau afin de recuperer les données sur les coordonnées des amis. code fonctionnel mais pas encore tout a fait acquis...meme si j'ai compris le principe">
+      <created>1580077691545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580077691545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="correction de l'exercice 11. modification des conditions et boucles en while/if/if. suppression de sommeRendue" />
     <MESSAGE value="Tentative de comprehension de l'exercice avec les chevaux. Sans succés pour le moment. Je retourne aux cours.Correction du nom de certaines variables qui n'etaient pas en camelCase." />
     <MESSAGE value="Ajout d'une classe de demarage selectionnant le type d'exercice. Chaque type correspond a un exercice different. Ajout de la premiere partie de l'exercice poo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'une classe de demarage selectionnant le type d'exercice. Chaque type correspond a un exercice different. Ajout de la premiere partie de l'exercice poo" />
+    <MESSAGE value="ajout d'untableau afin de recuperer les données sur les coordonnées des amis. code fonctionnel mais pas encore tout a fait acquis...meme si j'ai compris le principe" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout d'untableau afin de recuperer les données sur les coordonnées des amis. code fonctionnel mais pas encore tout a fait acquis...meme si j'ai compris le principe" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1579956137336">
+    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1580077689105">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1579956137336" />
+    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580077689105" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1579717484770">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579717484770" />
-    <state width="1557" height="221" key="GridCell.Tab.0.bottom" timestamp="1580077533813">
+    <state width="1557" height="221" key="GridCell.Tab.0.bottom" timestamp="1580078580013">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580077533813" />
-    <state width="1557" height="221" key="GridCell.Tab.0.center" timestamp="1580077533813">
+    <state width="1557" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580078580013" />
+    <state width="1557" height="221" key="GridCell.Tab.0.center" timestamp="1580078580010">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580077533813" />
-    <state width="1557" height="221" key="GridCell.Tab.0.left" timestamp="1580077533813">
+    <state width="1557" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580078580010" />
+    <state width="1557" height="221" key="GridCell.Tab.0.left" timestamp="1580078580010">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580077533813" />
-    <state width="1557" height="221" key="GridCell.Tab.0.right" timestamp="1580077533813">
+    <state width="1557" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580078580010" />
+    <state width="1557" height="221" key="GridCell.Tab.0.right" timestamp="1580078580010">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580077533813" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1579956197330">
+    <state width="1557" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580078580010" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1580077709054">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1579956197330" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580077709054" />
     <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1579965018503">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

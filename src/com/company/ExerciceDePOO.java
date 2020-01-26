@@ -36,7 +36,9 @@ connaître l’âge de la personne concernée.
         Scanner keyboard = new Scanner(System.in);
         int nombreDAmisAEntrer = keyboard.nextInt();
 
-        String tableauDesAmisEntre[] = new String[nombreDAmisAEntrer];
+        String tableauDesAmisEntres[] = new String[nombreDAmisAEntrer];
+        //au debut la declaration du tableau a ete realisee dans la boucle for a la fin, ce qui a provoqué une erreur de dependance...
+        // deplacement de la declaration avant la condition if afin que la lecture des données du tableau soient accessibles apres la boucle for.
 
         int nombreDAmisEntres = 0;
         int ami = 1;
@@ -55,16 +57,16 @@ connaître l’âge de la personne concernée.
                 System.out.println("Entrez votre age.");
                 personne.age = keyboard.nextInt();
 
-                String informationsSurLesAmis = (personne.nom + ", " + personne.prenom + ", " + personne.age);
+                String informationsSurLesAmis = ("Nom de Famille: "+personne.nom + ", Prénom: " + personne.prenom + ", Age: " + personne.age);
+
                 int entreeDuTableau = ami - 1;
-                tableauDesAmisEntre[entreeDuTableau] = informationsSurLesAmis;
-                //System.out.println("Ami " + ami + ": " + tableauDesAmisEntre[entreeDuTableau]);
-
-
+                tableauDesAmisEntres[entreeDuTableau] = informationsSurLesAmis;
             }
-             for(int i = 0; i < tableauDesAmisEntre.length; i++)//fonction copiée..j'ai honte...
+
+             for(int i = 0; i < tableauDesAmisEntres.length; i++)//fonction copiée..j'ai honte...
                  {
-                     System.out.println("À l'emplacement " + i +" du tableau nous avons = " + tableauDesAmisEntre[i]);
+                     int numeroDAmi=i+1;
+                     System.out.println("Ami " + numeroDAmi +" = " + tableauDesAmisEntres[i]);//je dois encore modifier le i pour qu'il affiche le bon numero...fait: ajout d'une variable numeroDAmi
                  }
 
                 System.out.println("Souhaitez vous recommencer l'exercice ? O/N");
