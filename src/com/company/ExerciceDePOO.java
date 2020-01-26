@@ -13,32 +13,14 @@ définissez les données de la classe Personne.*/
     }
 
 /*2. Écrivez une application MesAmis qui utilise un objet untel de type Personne et
-qui demande la saisie au clavier de ses nom, prénom et âge.*/
+qui demande la saisie au clavier de ses nom, prénom et âge.
 
-    public void presentezVous() {
-        System.out.println("Combien d'amis vont être inscrit ?");
-        Scanner keyboard = new Scanner(System.in);
-        int nombreDAmisAEntrer = keyboard.nextInt();
-        int nombreDAmisEntres = 0;
-        int ami=1;
-        if(nombreDAmisAEntrer > 0) {
-            for (; nombreDAmisAEntrer > nombreDAmisEntres; nombreDAmisEntres++, ami++) {
-                Personne personne = new Personne();
-                keyboard = new Scanner(System.in);
-                System.out.println("Entrez votre nom de famille.");
-                personne.nom = keyboard.nextLine().toUpperCase();
-                System.out.println("Entrez votre prénom.");
-                personne.prenom = keyboard.nextLine();
-                System.out.println("Entrez votre age.");
-                personne.age = keyboard.nextInt();
-                String amiUn = new String(": Vous vous nommez: " + personne.nom + " " + personne.prenom + " et vous avez " + personne.age + " ans");
-                System.out.println("Ami " + ami + amiUn);
-            }
-        }
-        else{
-            System.out.println("Vous n'avez pas d'ami a inscrire en ce moment.");
-        }
-/*3. Dans la classe Personne, décrivez la méthode presentezVous(), qui affiche les
+3. Dans la classe Personne, décrivez la méthode presentezVous(), qui affiche les
+caractéristiques de la personne concernée.
+
+4. Modifiez l’application de façon à afficher les caractéristiques de l’objet Untel.
+
+3. Dans la classe Personne, décrivez la méthode presentezVous(), qui affiche les
 caractéristiques de la personne concernée.
 
 4. Modifiez l’application de façon à afficher les caractéristiques de l’objet Untel.
@@ -47,9 +29,63 @@ caractéristiques de la personne concernée.
 connaître le nom de la personne concernée.
 6. Dans la classe Personne, décrivez la méthode quelEstVotreAge(), qui permet de
 connaître l’âge de la personne concernée.
-7. Modifiez l’application de façon à afficher le nom puis l’âge d’Untel.
+7. Modifiez l’application de façon à afficher le nom puis l’âge d’Untel.*/
 
-Exercice 2: Utilisation d’une classe
+    public void presentezVous() {
+        System.out.println("Combien d'amis vont être inscrit ?");
+        Scanner keyboard = new Scanner(System.in);
+        int nombreDAmisAEntrer = keyboard.nextInt();
+
+        String tableauDesAmisEntre[] = new String[nombreDAmisAEntrer];
+
+        int nombreDAmisEntres = 0;
+        int ami = 1;
+        if (nombreDAmisAEntrer > 0) {
+            for (; nombreDAmisAEntrer > nombreDAmisEntres; nombreDAmisEntres++, ami++) {
+
+                Personne personne = new Personne();
+                keyboard = new Scanner(System.in);
+
+                System.out.println("Entrez votre nom de famille.");
+                personne.nom = keyboard.nextLine().toUpperCase();
+
+                System.out.println("Entrez votre prénom.");
+                personne.prenom = keyboard.nextLine();
+
+                System.out.println("Entrez votre age.");
+                personne.age = keyboard.nextInt();
+
+                String informationsSurLesAmis = (personne.nom + ", " + personne.prenom + ", " + personne.age);
+                int entreeDuTableau = ami - 1;
+                tableauDesAmisEntre[entreeDuTableau] = informationsSurLesAmis;
+                //System.out.println("Ami " + ami + ": " + tableauDesAmisEntre[entreeDuTableau]);
+
+
+            }
+             for(int i = 0; i < tableauDesAmisEntre.length; i++)//fonction copiée..j'ai honte...
+                 {
+                     System.out.println("À l'emplacement " + i +" du tableau nous avons = " + tableauDesAmisEntre[i]);
+                 }
+
+                System.out.println("Souhaitez vous recommencer l'exercice ? O/N");
+                keyboard = new Scanner(System.in);
+                String restart = keyboard.nextLine();
+                switch (restart) {
+                    case "O":
+                    case "o":
+                    case "oui":
+                    case "Oui":
+                    case "OUI":
+                        presentezVous();
+                }
+
+        } else {
+            System.out.println("Vous n'avez pas d'ami a inscrire en ce moment.");
+        }
+        
+    }
+
+/*Exercice 2: Utilisation d’une classe
 Voici le texte d’une classe représentant de façon sommaire un compte bancaire et les
 opérations bancaires courantes.
 
@@ -93,4 +129,4 @@ des virements vers les comptes d’indice 6, 7, 8 et 9).
 Enfin, vous afficherez les soldes de tous les comptes. Ici encore, vous testerez et
 compilerez le code proposé.*/
     }
-}
+
