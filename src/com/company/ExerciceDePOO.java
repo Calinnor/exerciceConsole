@@ -152,6 +152,26 @@ connaître l’âge de la personne concernée.
                 exerciceComptesBanquaires();
 
         }
+
+    }
+    public void exerciceTableauPooComptesBanquaires(){
+
+        //creation d'un tableau de 10 cases
+        int [] tableauExerciceBanquaire= new int[10];
+        //dans chaque case il doit y avoir un compte banquaire.
+        //Faire une boucle for qui donne a chaque case un compte de 1 a 10
+        // et qui verse 200 dans chacun.
+        //y ajouter, lors de la boucle 100x l'indice en valeur: indice 0 : 200+0*100...indice 9:200+9*100
+        //faire ensuite une autre boucle for pour virement de 20 sur chacun des comptes +1.
+        //afficher les valeurs du tableau
+
+        //En gros l'idee c'est ca:
+        //for(i=0,i<10,i++ca c'est le remplissage du tableau indice 0 a 9){compte banquaire numero i+1, solde 200+indice i*100}
+
+        //plus compliqué cette boucle qui vient...pour compte dans case a partir de 0 [x] -20 et case [x+1] +20 jusqu'a indice 9
+
+
+
     }
 }
 
