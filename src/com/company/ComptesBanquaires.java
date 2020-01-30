@@ -2,8 +2,8 @@ package com.company;
 
 public class ComptesBanquaires {
 
-        int solde;
-        int numeroDeCompte;
+        private int solde;
+        private int numeroDeCompte;
 
         public ComptesBanquaires(){
             int numeroDeCompte=0;
@@ -13,6 +13,12 @@ public class ComptesBanquaires {
             numeroDeCompte=paramNumeroDeCompte;
             solde=paramSoldeDuCompte;
         }
+         public void setNumero(int paramNumeroDeCompte){paramNumeroDeCompte=numeroDeCompte;}
+         public void setSolde(int paramSoldeDuCompte){paramSoldeDuCompte=solde;}
+         public int getNumeroDeCompte(){return numeroDeCompte;}
+         public int getSolde(){return solde;}
+
+
 
         void deposer(int montant) {
             solde = solde + montant;

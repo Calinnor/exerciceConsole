@@ -107,33 +107,38 @@ connaître l’âge de la personne concernée.
         soldeDuCompte = keyboard.nextInt();
         ComptesBanquaires compte2 = new ComptesBanquaires(numeroDeCompte, soldeDuCompte);
 
-        System.out.println("Etat actuel des comptes: Compte " + compte1.numeroDeCompte + " solde: " + compte1.solde + " Euros. Compte " + compte2.numeroDeCompte + " solde: " + compte2.solde);
+        System.out.println("Etat actuel des comptes: Compte " + compte1.getNumeroDeCompte()+ " solde: " + compte1.getSolde() + " Euros. Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
 
         System.out.println("Entrez un montant a ajouter sur le premier compte");
         keyboard = new Scanner(System.in);
         int montant = keyboard.nextInt();
         //System.out.println("Depot de 500 Euros sur le compte 1");
         compte1.deposer(montant);
-        System.out.println("Compte " + compte1.numeroDeCompte + " solde: " + compte1.solde);
+        System.out.println("Compte " + compte1.getNumeroDeCompte() + " solde: " + compte1.getSolde());
 
         System.out.println("Entrez un montant à déposer sur le second compte");
         montant = keyboard.nextInt();
         compte2.deposer(montant);
-        System.out.println("Compte " + compte2.numeroDeCompte + " solde: " + compte2.solde);
+        System.out.println("Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
+        System.out.println();
 
-        System.out.println("Retrait de  10 Euros sur le second compte");
+        System.out.println("Retrait automatique de  10 Euros sur le second compte");
         compte2.retirer(10);
-        System.out.println("Compte " + compte2.numeroDeCompte + " solde: " + compte2.solde);
+        System.out.println("Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
+        System.out.println();
+
         System.out.println("Effectuez un retrait sur le second compte");
         montant = keyboard.nextInt();
         compte2.retirer(montant);
-        System.out.println("Compte " + compte2.numeroDeCompte + " solde: " + compte2.solde);
+        System.out.println("Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
 
-        System.out.println("Virement de 75 Euros du premier compte vers le second");
+        System.out.println("Virement automatique de 75 Euros du premier compte vers le second");
+        System.out.println();
         compte1.virerVers(75, compte2);
 
-        System.out.println("Compte 1: numero de compte: " + compte1.numeroDeCompte + " solde: " + compte1.solde);
-        System.out.println("Compte 2: numero de compte: " + compte2.numeroDeCompte + " solde: " + compte2.solde);
+        System.out.println("Compte 1: numero de compte: " + compte1.getNumeroDeCompte() + " solde: " + compte1.getSolde());
+        System.out.println("Compte 2: numero de compte: " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
+        System.out.println();
 
         System.out.println("Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);

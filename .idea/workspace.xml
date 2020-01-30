@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cda9839d-b584-4a48-88ab-c8a8ed0383f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ComptesBanquaires.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ComptesBanquaires.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ExerciceDePOO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ExerciceDePOO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ComptesBanquaires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ComptesBanquaires.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580420054792</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ajout de la classe comptes banquaires et du debut de l'exercice sur les comptes.">
+      <created>1580420383797</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580420383797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,34 +136,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="ajout de la classe comptes banquaires et du debut de l'exercice sur les comptes." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1580420052845">
+    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1580420381963">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580420052845" />
+    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580420381963" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1579717484770">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579717484770" />
-    <state width="1540" height="221" key="GridCell.Tab.0.bottom" timestamp="1580420158047">
+    <state width="1557" height="223" key="GridCell.Tab.0.bottom" timestamp="1580421780436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580420158047" />
-    <state width="1540" height="221" key="GridCell.Tab.0.center" timestamp="1580420158047">
+    <state width="1557" height="223" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
+    <state width="1557" height="223" key="GridCell.Tab.0.center" timestamp="1580421780436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580420158047" />
-    <state width="1540" height="221" key="GridCell.Tab.0.left" timestamp="1580420158047">
+    <state width="1557" height="223" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
+    <state width="1557" height="223" key="GridCell.Tab.0.left" timestamp="1580421780436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580420158047" />
-    <state width="1540" height="221" key="GridCell.Tab.0.right" timestamp="1580420158047">
+    <state width="1557" height="223" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
+    <state width="1557" height="223" key="GridCell.Tab.0.right" timestamp="1580421780436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580420158047" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1580420065329">
+    <state width="1557" height="223" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1580420397146">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580420065329" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580420397146" />
     <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1579965018503">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
