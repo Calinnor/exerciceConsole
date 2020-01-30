@@ -17,7 +17,7 @@ public class MethodesExercices {
         }
     }
 
-    public static void makeAChoice() {
+    public void makeAChoice() {
         selectAnExercice();
         Scanner keyboard = new Scanner(System.in);
         int whichSelectedExercice = keyboard.nextInt();
@@ -62,13 +62,14 @@ public class MethodesExercices {
             case 0:
                 System.out.println("Vous n'avez pas choisi de faire les exercices.");
                 break;
-            default:System.out.println("Le numéro que vous avez demandé n'existe pas...;)");
+            default:
+                System.out.println("Le numéro que vous avez demandé n'existe pas...;)");
 
         }
         System.out.println("Souhaitez-vous retourner au menu des exercices ? oui/non ");
-        keyboard =new Scanner(System.in);
+        keyboard = new Scanner(System.in);
         String newExercice = keyboard.nextLine();
-        switch (newExercice){
+        switch (newExercice) {
             case "O":
             case "o":
             case "oui":
@@ -83,7 +84,7 @@ public class MethodesExercices {
     public static void exerciceUnViaMethode() {
         System.out.println("Exercice 1 : entrez un chiffre compris entre 1 et 5 jusqu'a ce qu'il convienne.");
 
-        Scanner keyboard= new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         System.out.println("Entrez un chiffre entre un et cinq.");
         int nombreCherche = keyboard.nextInt();
 
@@ -97,7 +98,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -135,7 +136,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -153,8 +154,8 @@ public class MethodesExercices {
 
         System.out.println("Donnez une valeur de départ.");
         int nombreDeDepart;
-        Scanner keyboard=new Scanner(System.in);
-        nombreDeDepart=keyboard.nextInt();
+        Scanner keyboard = new Scanner(System.in);
+        nombreDeDepart = keyboard.nextInt();
 
         nombreDeDepart++;
 
@@ -167,7 +168,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -194,7 +195,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -226,7 +227,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -258,7 +259,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -269,27 +270,28 @@ public class MethodesExercices {
 
         System.out.println("Au revoir exercice 6.");
     }
-    public static void exerciceSevenViaMethod(){//exercice le plus difficile jusqu'a présent. La logique mathematique ne m'est pas apparue rapidement
+
+    public static void exerciceSevenViaMethod() {//exercice le plus difficile jusqu'a présent. La logique mathematique ne m'est pas apparue rapidement
         System.out.println("Exercice7: ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle." +
                 "nb: la factorielle de 8, notée 8 !, vaut 1x2x3x4x5x6x7x8");
         System.out.println("Entrez un chiffre de départ.");
-        Scanner keyboard=new Scanner(System.in);
-        int factorielle=keyboard.nextInt();
-        long x =1;
+        Scanner keyboard = new Scanner(System.in);
+        int factorielle = keyboard.nextInt();
+        long x = 1;
         long multiplicateur = 1;
         long somme;
 
-        while(multiplicateur<=factorielle){
-            somme = x*multiplicateur;
+        while (multiplicateur <= factorielle) {
+            somme = x * multiplicateur;
             multiplicateur++;
-            x=somme;
+            x = somme;
         }
         System.out.println(x);
 
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -299,26 +301,27 @@ public class MethodesExercices {
         }
         System.out.println("Au revoir exercice 7.");
     }
-    public static void exerciceEightViaMethod(){
+
+    public static void exerciceEightViaMethod() {
         System.out.println("Exercice 8:ecrire un algorithme qui demande successivement 20 nombres à l 'utilisateur," +
                 " et qui lui dise quel était le plus grand parmi ces 20 nombres. Entrez le nombre numéro 1 :..." +
                 "Entrez le nombre numéro 2:... Le plus grand nombre est...");
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Entrez un nombre:");
         int userNumber = keyboard.nextInt();
-        System.out.println("Le premier nombre est "+userNumber+". Entrez un nouveau nombre.");
+        System.out.println("Le premier nombre est " + userNumber + ". Entrez un nouveau nombre.");
 
         int highterNumber = userNumber;
         int numberOfNumber;
 
-        for(numberOfNumber=2;numberOfNumber<21;numberOfNumber++) {
+        for (numberOfNumber = 2; numberOfNumber < 21; numberOfNumber++) {
             keyboard = new Scanner(System.in);
             userNumber = keyboard.nextInt();
             System.out.println("Le nombre numéro " + numberOfNumber + " est " + userNumber);
             if (userNumber > highterNumber) {
                 highterNumber = userNumber;
             }
-            if(numberOfNumber<20){
+            if (numberOfNumber < 20) {
                 System.out.println("Entrez un nouveau nombre.");
             }
         }
@@ -328,7 +331,7 @@ public class MethodesExercices {
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
-        switch (restart){
+        switch (restart) {
             case "O":
             case "o":
             case "oui":
@@ -339,6 +342,7 @@ public class MethodesExercices {
         System.out.println("Au revoir exercice 8.");
 
     }
+
     public static void exerciceHeightSecondViaMethod() {
         System.out.println("Modifiez ensuite l'algorithme pour que de surcroit le programme affiche à quelle position a ete saisie le nombre." +
                 " C'etait la saisie numéro..");
@@ -349,8 +353,8 @@ public class MethodesExercices {
 
         int highterNumber = userNumber;
         int numberOfNumber;
-        int numberOfEntries=2;
-        int entryWithMaxNumber=0;
+        int numberOfEntries = 2;
+        int entryWithMaxNumber = 0;
 
         for (numberOfNumber = 2; numberOfNumber < 21; numberOfNumber++, numberOfEntries++) {
             keyboard = new Scanner(System.in);
@@ -358,14 +362,14 @@ public class MethodesExercices {
             System.out.println("Le nombre numéro " + numberOfNumber + " est " + userNumber);
             if (userNumber > highterNumber) {
                 highterNumber = userNumber;
-                entryWithMaxNumber=numberOfEntries;
+                entryWithMaxNumber = numberOfEntries;
             }
             if (numberOfNumber < 20) {
                 System.out.println("Entrez un nouveau nombre.");
             }
 
             if (numberOfNumber == 20) {
-                System.out.println("Le plus grand nombre entré est le: " + highterNumber+". Il a été entré lors de la saisie numéro "+entryWithMaxNumber);
+                System.out.println("Le plus grand nombre entré est le: " + highterNumber + ". Il a été entré lors de la saisie numéro " + entryWithMaxNumber);
             }
         }
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
@@ -381,7 +385,8 @@ public class MethodesExercices {
         }
         System.out.println("Au revoir exercice 8'(9).");
     }
-    public static void exerciceNineViaMethode(){
+
+    public static void exerciceNineViaMethode() {
         System.out.println(" Réécrire l'algorithme précédant, mais cette fois-ci on ne connait pas d'avance combien l'utilisateur souhaite saisir " +
                 "de nombres. La saisie des nombres s'arrete lorsque l'utilisateur saisi un zéro.");
         Scanner keyboard = new Scanner(System.in);
@@ -391,24 +396,24 @@ public class MethodesExercices {
 
         int highterNumber = userNumber;
         int numberOfNumber;
-        int numberOfEntries=2;
-        int entryWithMaxNumber=0;
+        int numberOfEntries = 2;
+        int entryWithMaxNumber = 0;
 
         for (numberOfNumber = 1; ; numberOfNumber++, numberOfEntries++) {
             keyboard = new Scanner(System.in);
             userNumber = keyboard.nextInt();
-            if(userNumber==0){
+            if (userNumber == 0) {
                 break;
             }
             System.out.println("Le nombre numéro " + numberOfNumber + " est " + userNumber);
             if (userNumber > highterNumber) {
                 highterNumber = userNumber;
-                entryWithMaxNumber=numberOfEntries;
+                entryWithMaxNumber = numberOfEntries;
             }
             System.out.println("Entrez un nouveau nombre. Entrez 0 pour arreter");
         }
-        System.out.println("Le plus grand nombre entré est le: " + highterNumber+"." +
-                " Il a été entré lors de la saisie numéro "+entryWithMaxNumber);
+        System.out.println("Le plus grand nombre entré est le: " + highterNumber + "." +
+                " Il a été entré lors de la saisie numéro " + entryWithMaxNumber);
         System.out.println("Bravo ! Souhaitez vous recommencer l'exercice ? O/N");
         keyboard = new Scanner(System.in);
         String restart = keyboard.nextLine();
@@ -422,35 +427,36 @@ public class MethodesExercices {
         }
         System.out.println("Au revoir exercice 10.");
     }
-    public static void exerciceTenViaMethode(){
-        System.out.println("Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit,"+
+
+    public static void exerciceTenViaMethode() {
+        System.out.println("Lire la suite des prix en euros entiers terminés par 0 des achats d'un client. Calculer la somme qu'il doit," +
                 " lire la somme qu'il paye et simuler la remise de la monnaie en affichant les textes 10 euros, 5 euros," +
                 "  et 1 euro autant de fois qu'il y a de coupures de chaque sorte à rendre.");
-        int achat, sommeDue = 0, sommePayee ;
+        int achat, sommeDue = 0, sommePayee;
         System.out.println("Entrez le prix de vos achats.");
         Scanner keyboard = new Scanner(System.in);
-        achat=keyboard.nextInt();
-        while (achat>0){
-            sommeDue=sommeDue+achat;
+        achat = keyboard.nextInt();
+        while (achat > 0) {
+            sommeDue = sommeDue + achat;
             System.out.println("Entrez le prix de vos achats. Entrez 0 si vous avez terminé vos achats.");
-            keyboard=new Scanner(System.in);
-            achat=keyboard.nextInt();
+            keyboard = new Scanner(System.in);
+            achat = keyboard.nextInt();
         }
-        System.out.println("Vous devez "+sommeDue+ " Euros. Entrez le montant de votre règlement:");
-        keyboard=new Scanner(System.in);
-        sommePayee=keyboard.nextInt();
-        sommeDue=sommeDue-sommePayee;
-        while(sommeDue>0){
-            System.out.println("Vous devez encore "+sommeDue+ " Euros. Entrez le montant de votre règlement:");
-            keyboard=new Scanner(System.in);
-            sommePayee=keyboard.nextInt();
-            sommeDue=sommeDue-sommePayee;
+        System.out.println("Vous devez " + sommeDue + " Euros. Entrez le montant de votre règlement:");
+        keyboard = new Scanner(System.in);
+        sommePayee = keyboard.nextInt();
+        sommeDue = sommeDue - sommePayee;
+        while (sommeDue > 0) {
+            System.out.println("Vous devez encore " + sommeDue + " Euros. Entrez le montant de votre règlement:");
+            keyboard = new Scanner(System.in);
+            sommePayee = keyboard.nextInt();
+            sommeDue = sommeDue - sommePayee;
         }
-        if (sommeDue==0) {
+        if (sommeDue == 0) {
             System.out.println("Merci.");
         }
-        if(sommeDue<0) {
-            sommeDue=Math.abs(sommeDue);
+        if (sommeDue < 0) {
+            sommeDue = Math.abs(sommeDue);
             int billetsDeDix = sommeDue / 10;
             int restes = sommeDue % 10;
             int billetsDeCinq = restes / 5;
@@ -473,6 +479,12 @@ public class MethodesExercices {
         }
         System.out.println("Au revoir exercice 11.");
     }
+
+
+
+
+
+
     public static void exerciceElevenViaMethod(){
         System.out.println(" Ecrire un algo permettant de connaitre ses chances de connaitre de gagner au tiercé, quinté et autrees impots volontaires;\n" +
                 "    On demande a l'utilisateur le nombre de chevaux partants et le nombre de chevaux joués...(voir mail)");
