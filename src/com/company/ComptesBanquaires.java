@@ -2,30 +2,43 @@ package com.company;
 
 public class ComptesBanquaires {
 
-        private int solde;
-        private int numeroDeCompte;
+        private int variableInstanceSoldeCompte;
+        private int variableInstanceNumeroDeCompte;
 
         public ComptesBanquaires(){
-            int numeroDeCompte=0;
-            int solde = 0;
+            int variableConstructeurDefautNumeroDeCompte;
+            int variableConstructeurDefautSoldeCompte;
         }
-        public ComptesBanquaires(int paramNumeroDeCompte,int paramSoldeDuCompte){
-            numeroDeCompte=paramNumeroDeCompte;
-            solde=paramSoldeDuCompte;
+
+        public ComptesBanquaires(int variableConstructeurNumeroDeCompte,int variableConstructeurSoldeDuCompte){
+            this.variableInstanceNumeroDeCompte=variableConstructeurNumeroDeCompte;
+            this.variableInstanceSoldeCompte=variableConstructeurSoldeDuCompte;
         }
-         public void setNumero(int paramNumeroDeCompte){paramNumeroDeCompte=numeroDeCompte;}
-         public void setSolde(int paramSoldeDuCompte){paramSoldeDuCompte=solde;}
-         public int getNumeroDeCompte(){return numeroDeCompte;}
-         public int getSolde(){return solde;}
+
+         public void setNumero(int nouveauNumeroDeCompteSetNumero){
+            this.variableInstanceNumeroDeCompte=nouveauNumeroDeCompteSetNumero;
+        }
+
+         public void setSolde(int nouveauSoldeDuCompteSetSolde){
+            this.variableInstanceSoldeCompte=nouveauSoldeDuCompteSetSolde;
+        }
+
+         public int getNumeroDeCompte(){
+            return this.variableInstanceNumeroDeCompte;
+        }
+
+         public int getSolde(){
+            return this.variableInstanceSoldeCompte;
+        }
 
 
 
         void deposer(int montant) {
-            solde = solde + montant;
+            this.variableInstanceSoldeCompte = this.variableInstanceSoldeCompte + montant;
         }
 
         void retirer(int montant) {
-            solde = solde - montant;
+            this.variableInstanceSoldeCompte = this.variableInstanceSoldeCompte - montant;
         }
 
         void virerVers(int montant, ComptesBanquaires destination) {
@@ -33,7 +46,11 @@ public class ComptesBanquaires {
             destination.deposer(montant);
         }
         void afficher(){
-            System.out.println("solde: "+ solde);
+            System.out.println("solde: "+ variableInstanceSoldeCompte);
+        }
+
+        public String toString(){
+            return "Compte numéro "+ this.variableInstanceNumeroDeCompte + " solde du compte "+this.variableInstanceSoldeCompte;
         }
 
 }

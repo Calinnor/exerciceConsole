@@ -1,5 +1,7 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ExerciceDePOO {
@@ -25,14 +27,12 @@ connaître le nom de la personne concernée.
 connaître l’âge de la personne concernée.
 7. Modifiez l’application de façon à afficher le nom puis l’âge d’Untel.*/
 
-    public void presentezVous() {
+    public static void presentezVous() {
         System.out.println("Combien d'amis vont être inscrit ?");
         Scanner keyboard = new Scanner(System.in);
         int nombreDAmisAEntrer = keyboard.nextInt();
 
         String[] tableauDesAmisEntres = new String[nombreDAmisAEntrer];
-        //au debut la declaration du tableau a ete realisee dans la boucle for a la fin, ce qui a provoqué une erreur de dependance...
-        // deplacement de la declaration avant la condition if afin que la lecture des données du tableau soient accessibles apres la boucle for.
 
         int nombreDAmisEntres = 0;
         int ami = 1;
@@ -44,7 +44,6 @@ connaître l’âge de la personne concernée.
 
                 System.out.println("Entrez votre nom de famille.");
                 personne.setNomDeLaPersonne(keyboard.nextLine().toUpperCase());
-                //methode setNom... de la classe personne pour ecrire le nom avec en parametres (valeur a ecrire) l'entree clavier
 
                 System.out.println("Entrez votre prénom.");
                 personne.setPrenomDeLaPersonne(keyboard.nextLine());
@@ -53,27 +52,13 @@ connaître l’âge de la personne concernée.
                 personne.setAgeDeLaPersonne(keyboard.nextInt());
 
                 String informationsSurLesAmis = ("Nom de Famille: " + personne.getNomDeLaPersonne() + ", Prénom: " + personne.getPrenomDeLaPersonne() + ", Age: " + personne.getAgeDeLaPersonne());
-                //je dois arriver a faire en sorte que personne devienne une variable avec un nom propre contenant les donness personne...afin de differencier les differentes entrees.
-                //mais je ne trouve pas comment faire :(
 
                 int entreesDuTableau = ami - 1;
                 tableauDesAmisEntres[entreesDuTableau] = informationsSurLesAmis;
             }
-            /*boucle for utilisée en tout premier pour la lecture du tableau. Remplacée par une boucle foreach
-             for(int i = 0; i < tableauDesAmisEntres.length; i++)
-                 //j'utilise length car a l'origine la taille du tableau n'est pas fixe.
-                 // Il n'est donc pas possible de mettre une valeur numerique deriere le i<.
-                 {
-                     int numeroDAmi=i+1;
-                     System.out.println("Ami " + numeroDAmi +" = " + tableauDesAmisEntres[i]);//je dois encore modifier le i pour qu'il affiche le bon numero...fait: ajout d'une variable numeroDAmi
-                 }*/
 
-            System.out.println("Execution de la lexture des données du tableau via for each tentative");//yes j'ai compris :)
-            for (String valeurDuTableau : tableauDesAmisEntres)
-            //creation de la variable valeurdutableau qui va recevoir chacune des valeur du tableau tableaudesamis jusq'a la fin puis les afficher.
-            {
-                System.out.println(valeurDuTableau);
-            }
+            System.out.println("Execution de la lecture des données du tableau ");
+            System.out.println(Arrays.toString(tableauDesAmisEntres));
 
             System.out.println("Souhaitez vous recommencer l'exercice ? O/N");
             keyboard = new Scanner(System.in);
@@ -107,7 +92,7 @@ connaître l’âge de la personne concernée.
         soldeDuCompte = keyboard.nextInt();
         ComptesBanquaires compte2 = new ComptesBanquaires(numeroDeCompte, soldeDuCompte);
 
-        System.out.println("Etat actuel des comptes: Compte " + compte1.getNumeroDeCompte()+ " solde: " + compte1.getSolde() + " Euros. Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
+        System.out.println("Etat actuel des comptes: Compte " + compte1.getNumeroDeCompte() + " solde: " + compte1.getSolde() + " Euros. Compte " + compte2.getNumeroDeCompte() + " solde: " + compte2.getSolde());
 
         System.out.println("Entrez un montant a ajouter sur le premier compte");
         keyboard = new Scanner(System.in);
@@ -150,30 +135,74 @@ connaître l’âge de la personne concernée.
             case "Oui":
             case "OUI":
                 exerciceComptesBanquaires();
+        }
+    }
 
+
+    public void exerciceTableauPooComptesBancaires() {
+        Scanner keyboard = new Scanner(System.in);
+
+        ComptesBanquaires[] tableauExerciceBanquaire;
+        int i;
+        int numero;
+        int solde;
+        System.out.println("Entrez le nmobre de comptes à répertorier");
+        int nombreDeComptes=keyboard.nextInt();
+        tableauExerciceBanquaire = new ComptesBanquaires[nombreDeComptes];
+
+        for (i = 0; i < tableauExerciceBanquaire.length; i++) {
+
+            System.out.println("Entrez le numero du compte "+(i+1));
+            numero = keyboard.nextInt();
+
+            System.out.println("Entrez le solde du compte auquel y sera ajouté 200 + l'indexe du tableaux100"+(i+1));
+            solde = (keyboard.nextInt()+(i*100+200));
+
+            tableauExerciceBanquaire[i] = new ComptesBanquaires(numero, solde);
+        }
+        for(i=0;i<tableauExerciceBanquaire.length;i++){
+            System.out.println(tableauExerciceBanquaire[i]);
         }
 
+        }
     }
-    public void exerciceTableauPooComptesBanquaires(){
-
-        //creation d'un tableau de 10 cases
-        int [] tableauExerciceBanquaire= new int[10];
-        //dans chaque case il doit y avoir un compte banquaire.
-        //Faire une boucle for qui donne a chaque case un compte de 1 a 10
-        // et qui verse 200 dans chacun.
-        //y ajouter, lors de la boucle 100x l'indice en valeur: indice 0 : 200+0*100...indice 9:200+9*100
-        //faire ensuite une autre boucle for pour virement de 20 sur chacun des comptes +1.
-        //afficher les valeurs du tableau
-
-        //En gros l'idee c'est ca:
-        //for(i=0,i<10,i++ca c'est le remplissage du tableau indice 0 a 9){compte banquaire numero i+1, solde 200+indice i*100}
-
-        //plus compliqué cette boucle qui vient...pour compte dans case a partir de 0 [x] -20 et case [x+1] +20 jusqu'a indice 9
 
 
 
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //dans chaque case il doit y avoir un compte banquaire.
+            //Faire une boucle for qui donne a chaque case un compte de 1 a 10
+            // et qui verse 200 dans chacun.
+            //y ajouter, lors de la boucle 100x l'indice en valeur: indice 0 : 200+0*100...indice 9:200+9*100
+            //faire ensuite une autre boucle for pour virement de 20 sur chacun des comptes +1.
+            //afficher les valeurs du tableau
+
+            //En gros l'idee c'est ca:
+            //for(i=0,i<10,i++ca c'est le remplissage du tableau indice 0 a 9){compte banquaire numero i+1, solde 200+indice i*100}
+
+            //plus compliqué cette boucle qui vient...pour compte dans case a partir de 0 [x] -20 et case [x+1] +20 jusqu'a indice 9
+
+
+
+
+
+
 
 
 

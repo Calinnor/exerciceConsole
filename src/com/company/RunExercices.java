@@ -9,6 +9,7 @@ public class RunExercices {
         System.out.println("Souhaitez vous faire les exercices d'algorythmes ? Tappez 1.");
         System.out.println("Souhaitez vous faire l'exercice de POO Présentez-vous ? Tappez 2.");
         System.out.println("Souhaitez vous faire l'exercice sur les comptes banquaires ? Tappez 3");
+        System.out.println("Souhaitez vous faire l'exercice des comptes banquaires avec le tableau ? Tappez 4");
         Scanner keyboard = new Scanner(System.in);
         exerciceChoice = keyboard.nextInt();
         switch (exerciceChoice) {
@@ -21,9 +22,13 @@ public class RunExercices {
                 ExerciceDePOO exerciceDePresentation = new ExerciceDePOO();
                 exerciceDePresentation.presentezVous();
                 break;
-            default:
+            case 3:
                 ExerciceDePOO exerciceDeBanque = new ExerciceDePOO();
                 exerciceDeBanque.exerciceComptesBanquaires();
+                break;
+            default:
+                ExerciceDePOO exerciceDePOO=new ExerciceDePOO();
+                exerciceDePOO.exerciceTableauPooComptesBancaires();
                 break;
         }
     }

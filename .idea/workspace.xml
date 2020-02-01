@@ -5,8 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ComptesBanquaires.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ComptesBanquaires.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ExerciceDePOO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exerciceJava/com/company/ExerciceDePOO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exerciceJava/com/company/RunExercices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exerciceJava/com/company/RunExercices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ComptesBanquaires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ComptesBanquaires.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ExerciceDePOO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/RunExercices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RunExercices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580420383797</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modification des instances de la classe comptesbanquaires en private. Mise en place des accesseurs et modifications des acces dans exercices poo">
+      <created>1580421939163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580421939163</updated>
+    </task>
+    <task id="LOCAL-00009" summary="mise en place de la reflexion sur le tableau de l'exercice comptes banquaires">
+      <created>1580423376622</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580423376622</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,41 +149,43 @@
     <MESSAGE value="ajout d'untableau afin de recuperer les données sur les coordonnées des amis. code fonctionnel mais pas encore tout a fait acquis...meme si j'ai compris le principe" />
     <MESSAGE value="modification des informations en sortie du tableau afin que le numero d'ami soit le bon et non celui de la case du tableau :!" />
     <MESSAGE value="ajout de la classe comptes banquaires et du debut de l'exercice sur les comptes." />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la classe comptes banquaires et du debut de l'exercice sur les comptes." />
+    <MESSAGE value="modification des instances de la classe comptesbanquaires en private. Mise en place des accesseurs et modifications des acces dans exercices poo" />
+    <MESSAGE value="mise en place de la reflexion sur le tableau de l'exercice comptes banquaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place de la reflexion sur le tableau de l'exercice comptes banquaires" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1580420381963">
+    <state x="17" y="25" key="CommitChangelistDialog2" timestamp="1580423375372">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580420381963" />
+    <state x="17" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580423375372" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1579717484770">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579717484770" />
-    <state width="1557" height="223" key="GridCell.Tab.0.bottom" timestamp="1580421780436">
+    <state width="818" height="223" key="GridCell.Tab.0.bottom" timestamp="1580562622423">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="223" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
-    <state width="1557" height="223" key="GridCell.Tab.0.center" timestamp="1580421780436">
+    <state width="818" height="223" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580562622423" />
+    <state width="818" height="223" key="GridCell.Tab.0.center" timestamp="1580562622423">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="223" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
-    <state width="1557" height="223" key="GridCell.Tab.0.left" timestamp="1580421780436">
+    <state width="818" height="223" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580562622423" />
+    <state width="818" height="223" key="GridCell.Tab.0.left" timestamp="1580562622423">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="223" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
-    <state width="1557" height="223" key="GridCell.Tab.0.right" timestamp="1580421780436">
+    <state width="818" height="223" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580562622423" />
+    <state width="818" height="223" key="GridCell.Tab.0.right" timestamp="1580562622423">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="223" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580421780436" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1580420397146">
+    <state width="818" height="223" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580562622423" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1580423387581">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580420397146" />
-    <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1579965018503">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580423387581" />
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1580550392416">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="496" y="255" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1579965018503" />
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1580550392416" />
     <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579709039780">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
